@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
-const port = 443;
+const port = 3000;
 const mainPage = fs.readFileSync("main.html", "utf8");
 const productPage = fs.readFileSync("product.html", "utf8");
 const productData = require("./product_data.json");
