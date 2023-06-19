@@ -1,0 +1,12 @@
+{
+    "1": {
+        "name": "T-shirt",
+        "description": "A cool T-shirt for summer",
+        "picture": "https://img.favpng.com/7/16/3/t-shirt-stock-photography-clothing-sizes-png-favpng-BjkXqfsUNkXN8DC25YtA9miSj.jpg"
+    },
+    "2": {
+        "name": "Sushi",
+        "description": "Some yummy fish and rice",
+        "picture": "https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?cs=srgb&dl=pexels-pixabay-357756.jpg&fm=jpg"
+    }
+}
