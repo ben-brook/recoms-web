@@ -7,9 +7,7 @@ const mainPage = fs.readFileSync("main.html", "utf8");
 const productPage = fs.readFileSync("product.html", "utf8");
 const productData = require("./product_data.json");
 
-app.get("/", (req, res) => {
-  res.type("html").send(mainPage);
-});
+app.get("/", (_, res) => res.type("html").send(mainPage));
 
 app.get("/products/:id", (req, res) => {
   const { id } = req.params;
