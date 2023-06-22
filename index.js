@@ -9,6 +9,8 @@ const productData = require("./product_data.json");
 
 app.get("/", (_, res) => res.type("html").send(mainPage));
 
+app.get("/");
+
 app.get("/products/:id", (req, res) => {
   const { id } = req.params;
   const page = productPage
@@ -17,6 +19,17 @@ app.get("/products/:id", (req, res) => {
     .replace(/\$desc/, productData[id].description);
 
   res.type("html").send(page);
+});
+
+// Your own super cool function
+var logger = function (req, res, next) {
+  console.log("GOT REQUEST !");
+  next(); // Passing the request to the next handler in the stack.
+};
+
+app.configure(function () {
+  app.use(logger); // Here you add your logger to the stack.
+  app.use(app.router); // The Express routes handler.
 });
 
 app.listen(port, () => {
