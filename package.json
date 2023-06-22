@@ -4,7 +4,7 @@
   "description": "Web server for recommendations use case",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,7 +17,10 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
+    "nodemon": "^2.0.22",
     "prettier": "2.8.8",
-    "sass": "^1.63.6"
+    "sass": "^1.63.6",
+    "stylelint": "^15.8.0",
+    "stylelint-config-standard": "^33.0.0"
   }
 }
