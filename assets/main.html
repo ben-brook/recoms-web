@@ -12,8 +12,25 @@
   </head>
   <body>
     <div class="container">
-      <h1>Please select a product to view:</h1>
-      <div id="product-list" class="list-group"></div>
+      <div class="row">
+        <div class="col">
+          <div class="input-group mb-3">
+            <input
+              id="search-box"
+              type="text"
+              class="form-control"
+              placeholder="Filter"
+              aria-label="Filter"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row column-gap-5">
+        <div class="col">
+          <div id="product-list" class="list-group list-group-flush"></div>
+        </div>
+        <div class="col"></div>
+      </div>
     </div>
   </body>
 </html>
