@@ -5,54 +5,11 @@ class TrieNode {
   }
 }
 
-// Linked list Queue implementation for trie BFS.
-class Queue {
-  constructor() {
-    this.head = null;
-    this.tail = null;
-  }
-
-  enqueue(element) {
-    const next = {};
-    next.val = element;
-
-    if (!this.head) {
-      this.head = next;
-      this.tail = next;
-      return;
-    }
-    this.head.next = next;
-    this.head = next;
-  }
-
-  dequeue() {
-    const val = this.tail.val;
-
-    if (this.tail == this.head) {
-      this.head = null;
-      this.tail = null;
-    } else {
-      this.tail = this.tail.next;
-    }
-
-    return val;
-  }
-
-  isEmpty() {
-    return this.head === null;
-  }
-}
-
-function traverseTrie(trie, callback) {
-  // We use a BFS to create by-length then by-alphabet traversal order.
-  const queue = new Queue();
-  queue.enqueue(trie);
-  while (!queue.isEmpty()) {
-    const cur = queue.dequeue();
-    callback(cur);
-    for (const child of Object.values(cur.children)) {
-      queue.enqueue(child);
-    }
+function* traverseTrie2(trie) {
+  // Pre-order DFS
+  yield trie;
+  for (const child of Object.values(trie.children)) {
+    yield* traverseTrie2(child);
   }
 }
 
@@ -78,11 +35,12 @@ function updateResults(searchTerm, products, trie) {
 
     const curProducts = new Set();
     if (cur) {
-      traverseTrie(cur, (node) => {
+      for (const node of traverseTrie2(cur)) {
+        console.log(node);
         for (const id of node.products) {
           curProducts.add(id);
         }
-      });
+      }
     }
     toShow = new Set([...toShow].filter((i) => curProducts.has(i)));
     if (toShow.size === 0) {
@@ -116,7 +74,7 @@ async function main() {
     a.innerHTML = product.name;
     productList.appendChild(a);
 
-    for (const word of product.name.split(/(\s+)/)) {
+    for (const word of product.name.split(/\s+/)) {
       let cur = trie;
       for (const char of simplify(word)) {
         let node = cur.children[char];
