@@ -61,11 +61,13 @@ function simplify(text) {
   return text
     .toLowerCase()
     .split("")
-    .filter((char) => /[a-z]/.test(char));
+    .filter((char) => /[a-z0-9]/.test(char));
 }
 
 function updateResults(searchTerm, products, trie) {
   // We find the highest node in the trie that corresponds to the search term.
+  // TODO: search word-by-word instead of for the full text. Take the
+  // intersection of products per word searched.
   let cur = trie;
   for (const char of simplify(searchTerm)) {
     let node = cur.children[char];
