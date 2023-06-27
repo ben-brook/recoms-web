@@ -1,7 +1,7 @@
 class TrieNode {
   constructor() {
     this.children = {};
-    this.products = [];
+    this.products = new Set();
   }
 }
 
@@ -65,36 +65,35 @@ function simplify(text) {
 }
 
 function updateResults(searchTerm, products, trie) {
-  // We find the highest node in the trie that corresponds to the search term.
-  // TODO: search word-by-word instead of for the full text. Take the
-  // intersection of products per word searched.
-  let cur = trie;
-  for (const char of simplify(searchTerm)) {
-    let node = cur.children[char];
-    if (!node) {
-      for (const id of Object.keys(products)) {
-        document.getElementById(`product-${id}`).style = "display:none;";
+  let toShow = new Set(Object.keys(products));
+  for (const word of searchTerm.split(/(\s+)/)) {
+    let cur = trie;
+    // We find the node in the trie that corresponds to the word.
+    for (const char of simplify(word)) {
+      if (!cur) {
+        break;
       }
-      return;
+      cur = cur.children[char];
     }
-    cur = node;
+
+    const curProducts = new Set();
+    if (cur) {
+      traverseTrie(cur, (node) => {
+        for (const id of node.products) {
+          curProducts.add(id);
+        }
+      });
+    }
+    toShow = new Set([...toShow].filter((i) => curProducts.has(i)));
+    if (toShow.size === 0) {
+      break;
+    }
   }
 
-  const toHide = new Set();
   for (const id of Object.keys(products)) {
-    toHide.add(id);
-  }
-
-  traverseTrie(cur, (node) => {
-    for (const id of node.products) {
-      toHide.delete(id);
-    }
-  });
-
-  for (const id of Object.keys(products)) {
-    document.getElementById(`product-${id}`).style = toHide.has(id)
-      ? "display:none;"
-      : "";
+    document.getElementById(`product-${id}`).style = toShow.has(id)
+      ? ""
+      : "display:none;";
   }
 }
 
@@ -105,33 +104,31 @@ async function main() {
 
   // Construct a trie for searching.
   const trie = new TrieNode();
+  const entries = Object.entries(products);
+  // We iterate in reverse order so that new products are displayed first.
+  for (let i = entries.length - 1; i >= 0; i--) {
+    const [id, product] = entries[i];
 
-  for (const [id, product] of Object.entries(products)) {
-    let cur = trie;
-    for (const char of simplify(product.name)) {
-      let node = cur.children[char];
-      if (!node) {
-        node = new TrieNode();
-        cur.children[char] = node;
+    const a = document.createElement("a");
+    a.href = `products/${id}`;
+    a.className = "list-group-item list-group-item-action";
+    a.id = `product-${id}`;
+    a.innerHTML = product.name;
+    productList.appendChild(a);
+
+    for (const word of product.name.split(/(\s+)/)) {
+      let cur = trie;
+      for (const char of simplify(word)) {
+        let node = cur.children[char];
+        if (!node) {
+          node = new TrieNode();
+          cur.children[char] = node;
+        }
+        cur = node;
       }
-      cur = node;
+      cur.products.add(id);
     }
-    cur.products.push(id);
   }
-
-  // We constructed the trie first so that the list elements are in a nice
-  // order.
-  traverseTrie(trie, (node) => {
-    for (const id of node.products) {
-      const product = products[id];
-      const a = document.createElement("a");
-      a.href = `products/${id}`;
-      a.className = "list-group-item list-group-item-action";
-      a.id = `product-${id}`;
-      a.innerHTML = product.name;
-      productList.appendChild(a);
-    }
-  });
 
   const searchBox = document.getElementById("search-box");
   searchBox.addEventListener("input", (e) => {
