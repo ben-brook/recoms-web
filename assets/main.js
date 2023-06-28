@@ -5,11 +5,11 @@ class TrieNode {
   }
 }
 
-function* traverseTrie2(trie) {
+function* traverseTrie(trie) {
   // Pre-order DFS
   yield trie;
   for (const child of Object.values(trie.children)) {
-    yield* traverseTrie2(child);
+    yield* traverseTrie(child);
   }
 }
 
@@ -35,7 +35,7 @@ function updateResults(searchTerm, products, trie) {
 
     const curProducts = new Set();
     if (cur) {
-      for (const node of traverseTrie2(cur)) {
+      for (const node of traverseTrie(cur)) {
         console.log(node);
         for (const id of node.products) {
           curProducts.add(id);
