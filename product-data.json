@@ -2,7 +2,7 @@
   "1": {
     "name": "T-shirt",
     "description": "A cool T-shirt for summer.",
-    "picture": "https://img.favpng.com/7/16/3/t-shirt-stock-photography-clothing-sizes-png-favpng-BjkXqfsUNkXN8DC25YtA9miSj.jpg"
+    "picture": "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg"
   },
   "2": {
     "name": "Sushi",
@@ -187,7 +187,7 @@
   "38": {
     "name": "Bathroom Scale",
     "description": "This is digital and very accurate.",
-    "picture": "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/3172209/scale-clipart-md.png"
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/4/48/Soehnle_bathroom_scales-1429.jpg"
   },
   "39": {
     "name": "Health o meter",
@@ -200,9 +200,9 @@
     "picture": "https://cdn.pixabay.com/photo/2022/03/07/07/20/weighing-scale-7053082_1280.jpg"
   },
   "41": {
-    "name": "MAXX Jrs",
-    "description": "Skis for the kids",
-    "picture": "https://elanskis.com/media/catalog/product/cache/0b05020c511a768f77cb5aed427f9b88/e/l/elanskis-maxx_jrs-afdjnx22-a.png"
+    "name": "Dynafit",
+    "description": "Touring skis",
+    "picture": "https://cdn.pixabay.com/photo/2015/02/13/23/49/touring-skis-635970_1280.jpg"
   },
   "42": {
     "name": "Colourful Skis",
@@ -215,9 +215,9 @@
     "picture": "https://blisterreview.com/wp-content/uploads/2022/06/libterty-origin-101-thumbnail-cropped-600x396.jpg"
   },
   "44": {
-    "name": "ZAG",
-    "description": "ZAG will keep you safe and fast on the mountain.",
-    "picture": "https://en.zagskis.com/media/catalog/product/cache/b3bb7a1f2bc850712581689d5b25c13b/z/a/zag-ubac-95-ltd-edition-20-yo-small.png"
+    "name": "Vintage Skis",
+    "description": "You can't really carve but they look interesting.",
+    "picture": "https://live.staticflickr.com/4474/26467130679_2a9d574c53_b.jpg"
   },
   "45": {
     "name": "Winter Skis",
@@ -245,9 +245,9 @@
     "picture": "https://cdn.shopify.com/s/files/1/0274/7219/articles/J_skis_with_snowboard_binding_on_snow_blog.jpg?v=1648787742"
   },
   "50": {
-    "name": "Yamaha Sax",
+    "name": "Alto Sax",
     "description": "This produces great sound quality.",
-    "picture": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Yamaha_Saxophone_YAS-62.png"
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/5/52/Alto_saxophone_in_E-flat_MET_DP331001.jpg"
   },
   "51": {
     "name": "Baritone Saxophone",
@@ -272,7 +272,7 @@
   "55": {
     "name": "Leather jacket",
     "description": "Looks stylish.",
-    "picture": "https://manofmany.com/wp-content/uploads/2016/06/Untitled-design-14-.png"
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/b/be/Black_worn_leather_jacket.jpg"
   },
   "56": {
     "name": "Men's Bomber Jacket",
