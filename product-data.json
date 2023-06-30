@@ -448,5 +448,135 @@
     "name": "Pink Starbucks Tumbler",
     "description": "It will automatically reject anything that wasn't purchased at Starbucks.",
     "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688029862/p90.png"
+  },
+  "91": {
+    "name": "Bunch of Oranges",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104640/p91.png"
+  },
+  "92": {
+    "name": "Big Orange",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104641/p92.png"
+  },
+  "93": {
+    "name": "Preprocessed Orange",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104642/p93.png"
+  },
+  "94": {
+    "name": "Clementine",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104642/p94.png"
+  },
+  "95": {
+    "name": "Big Clementine",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104643/p95.png"
+  },
+  "96": {
+    "name": "Blood Oranges",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104643/p96.png"
+  },
+  "97": {
+    "name": "Ready to Eat Blood Orange",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104644/p97.png"
+  },
+  "98": {
+    "name": "Mandarin",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104645/p98.png"
+  },
+  "99": {
+    "name": "Satsuma Mandarin",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104645/p99.png"
+  },
+  "100": {
+    "name": "Four Satsumas",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104646/p100.png"
+  },
+  "101": {
+    "name": "Tangerine",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104647/p101.png"
+  },
+  "102": {
+    "name": "Pre-Sliced Tangerine",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104647/p102.png"
+  },
+  "103": {
+    "name": "Strawberry",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104648/p103.png"
+  },
+  "104": {
+    "name": "Juicy Strawberry",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104648/p104.png"
+  },
+  "105": {
+    "name": "Garden Strawberry",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104649/p105.png"
+  },
+  "106": {
+    "name": "Home-Grown Strawberry",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104650/p106.png"
+  },
+  "107": {
+    "name": "Tiny Strawberry",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104651/p107.png"
+  },
+  "108": {
+    "name": "Long Strawberry",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104651/p108.png"
+  },
+  "109": {
+    "name": "Lemon",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104652/p109.png"
+  },
+  "110": {
+    "name": "Deformed Lemon",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104653/p110.png"
+  },
+  "111": {
+    "name": "Standard Banana",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104653/p111.png"
+  },
+  "112": {
+    "name": "Banana",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104654/p112.png"
+  },
+  "113": {
+    "name": "Brown Spotted Banana",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104654/p113.png"
+  },
+  "114": {
+    "name": "Cartoon Banana",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104655/p114.png"
+  },
+  "115": {
+    "name": "Cavendish Bananas",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104656/p115.png"
+  },
+  "116": {
+    "name": "Banana Bunch",
+    "description": "Yum",
+    "picture": "http://res.cloudinary.com/dpv0orw3j/image/upload/v1688104657/p116.png"
   }
 }

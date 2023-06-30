@@ -20,7 +20,7 @@ def main():
 
     ids = []
     urls = []
-    for id, data in filter(lambda t: int(t[0]) > 4, products.items()):
+    for id, data in filter(lambda t: int(t[0]) > 90, products.items()):
         ids.append(id)
         urls.append(data["picture"])
 
