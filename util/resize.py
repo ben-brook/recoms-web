@@ -5,14 +5,12 @@ import grequests
 from io import BytesIO
 import cloudinary.uploader
 
-CLOUD_NAME = "dpv0orw3j"
-
 
 def main():
     cloudinary.config(
-        cloud_name=CLOUD_NAME,
-        api_key="196261533759125",
-        api_secret="E-G3qJ4-MHp2fDJl85RnCot0ClM",
+        cloud_name="redacted",
+        api_key="redacted",
+        api_secret="redacted",
     )
 
     with open("./product-data.json") as f:
